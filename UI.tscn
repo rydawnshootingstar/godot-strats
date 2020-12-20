@@ -1,0 +1,121 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Font/Roboto-Regular-Dynamic.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Font/Roboto-Bold-Dynamic.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Sprites/Greenhouse.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Mine.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/SolarPanel.png" type="Texture" id=5]
+
+[node name="UI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 576.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 144.0
+color = Color( 0.392157, 0.368627, 0.368627, 1 )
+
+[node name="EndTurnButton" type="Button" parent="."]
+margin_left = 1046.0
+margin_top = 34.0
+margin_right = 1246.0
+margin_bottom = 109.0
+custom_fonts/font = ExtResource( 2 )
+text = "End Turn"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TurnText" type="Label" parent="."]
+margin_left = 875.0
+margin_top = 56.0
+margin_right = 1018.0
+margin_bottom = 92.0
+custom_fonts/font = ExtResource( 1 )
+text = "Turn 257"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuildingButtons" type="HBoxContainer" parent="."]
+margin_left = 34.0
+margin_top = 34.0
+margin_right = 270.0
+margin_bottom = 109.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MineButton" type="Button" parent="BuildingButtons"]
+margin_right = 76.0
+margin_bottom = 75.0
+icon = ExtResource( 4 )
+
+[node name="GreenhouseButton" type="Button" parent="BuildingButtons"]
+margin_left = 80.0
+margin_right = 156.0
+margin_bottom = 75.0
+icon = ExtResource( 3 )
+
+[node name="SolarButton" type="Button" parent="BuildingButtons"]
+margin_left = 160.0
+margin_right = 236.0
+margin_bottom = 75.0
+icon = ExtResource( 5 )
+
+[node name="HeaderFoodMetal" type="Label" parent="."]
+margin_left = 368.0
+margin_top = 32.0
+margin_right = 483.0
+margin_bottom = 107.0
+custom_fonts/font = ExtResource( 1 )
+text = "Food:
+Metal: "
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FoodMetalText" type="Label" parent="."]
+margin_left = 496.0
+margin_top = 32.0
+margin_right = 611.0
+margin_bottom = 107.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.87451, 0.529412, 0.0666667, 1 )
+text = "25 (+80) 
+25 (+80)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HeaderOxygenEnergy" type="Label" parent="."]
+margin_left = 616.0
+margin_top = 32.0
+margin_right = 731.0
+margin_bottom = 107.0
+custom_fonts/font = ExtResource( 1 )
+text = "Oxygen:
+Energy:"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OxygenEnergyText" type="Label" parent="."]
+margin_left = 744.0
+margin_top = 32.0
+margin_right = 863.0
+margin_bottom = 107.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.87451, 0.529412, 0.0666667, 1 )
+text = "25 (+80) 
+25 (+80)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
