@@ -10,8 +10,10 @@ var hasBuilding : bool = false
 var canPlaceBuilding : bool = false
  
 # components
-onready var highlight : Sprite = get_node("Highlight")
+onready var highlight : Sprite = get_node("TileHighlight")
 onready var buildingIcon : Sprite = get_node("BuildingIcon")
+
+
 
 # ===Begin Functions===
 # turns on or off the green highlight
@@ -23,7 +25,6 @@ func toggle_highlight (toggle):
 # called when a building is placed on the tile
 # sets the tile's building texture to display it
 func place_building (buildingTexture):
- 
 	hasBuilding = true
 	buildingIcon.texture = buildingTexture
 	
@@ -41,4 +42,12 @@ func _ready():
 
 
 func _on_Tile_input_event(viewport, event, shape_idx):
+	 # did we click on this tile with our mouse?
+	if event is InputEventMouseButton and event.pressed:
+		var gameManager = get_node("/root/initial_scene")
+ 
+	# if we can place a building down on this tile, then do so
+	if gameManager.currentlyPlacingBuilding and canPlaceBuilding:
+		gameManager.place_building(self)
+	
 	pass # Replace with function body.

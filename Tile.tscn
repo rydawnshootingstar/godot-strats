@@ -7,24 +7,24 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
 
-[node name="Node2D" type="Node2D"]
-
-[node name="Tile" type="Area2D" parent="."]
+[node name="Tile" type="Area2D"]
+position = Vector2( 32, 32 )
 script = ExtResource( 3 )
 
-[node name="TileHighlight" type="Sprite" parent="Tile"]
+[node name="TileHighlight" type="Sprite" parent="."]
 visible = false
-position = Vector2( 96, 160 )
+position = Vector2( 7.62939e-06, 7.62939e-06 )
 scale = Vector2( 6.4, 6.4 )
 texture = ExtResource( 2 )
 
-[node name="Ground" type="Sprite" parent="Tile"]
-position = Vector2( 32, 32 )
+[node name="Ground" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 
-[node name="CollisionRect" type="CollisionShape2D" parent="Tile"]
-position = Vector2( 32, 32 )
+[node name="CollisionRect" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="BuildingIcon" type="Sprite" parent="Tile"]
-[connection signal="input_event" from="Tile" to="Tile" method="_on_Tile_input_event"]
+[node name="BuildingIcon" type="Sprite" parent="."]
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 32, 32 )
+[connection signal="input_event" from="." to="." method="_on_Tile_input_event"]

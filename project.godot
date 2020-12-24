@@ -19,6 +19,10 @@ config/name="strats"
 run/main_scene="res://initial_scene.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+BuildingData="*res://BuildingData.gd"
+
 [display]
 
 window/size/width=1280
